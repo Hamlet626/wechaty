@@ -52,10 +52,11 @@
 //   .catch(e => log.error('StarterBot', e))
 
 import {
-  Wechaty,
-  config,
+  // Wechaty,
+  // config,
   WechatyBuilder
 } from 'wechaty';
+// const wc=require("wechaty");
 
 // import { FileBox }  from 'file-box'
 // import qrTerm from 'qrcode-terminal'
@@ -65,9 +66,9 @@ import {
 //  * 1. Declare your Bot!
 //  *
 //  */
-// const bot = WechatyBuilder.build({
-//   name: 'myWechatyBot',
-// })
+const bot = WechatyBuilder.build({
+  name: 'myWechatyBot',
+})
 //
 // /**
 //  *
@@ -86,12 +87,12 @@ import {
 //  * 3. Start the bot!
 //  *
 //  */
-// bot.start()
-//   .catch(async e => {
-//     console.error('Bot start() fail:', e)
-//     await bot.stop()
-//     process.exit(-1)
-//   })
+bot.start()
+  .catch(async e => {
+    console.error('Bot start() fail:', e)
+    await bot.stop()
+    process.exit(-1)
+  })
 //
 // /**
 //  *
@@ -206,8 +207,8 @@ import {
 // `
 // console.log(welcome)
 
-Wechaty.instance() // Singleton
-  .on('scan',     (qrcode, status)  => console.log(`Scan QR Code to login: ${status}\nhttps://wechaty.js.org/qrcode/${encodeURIComponent(qrcode)}`))
-  .on('login',    user              => console.log(`User ${user} logined`))
-  .on('message',  message           => console.log(`Message: ${message}`))
-  .start()
+// wc.Wechaty.instance() // Singleton
+//   .on('scan',     (qrcode, status)  => console.log(`Scan QR Code to login: ${status}\nhttps://wechaty.js.org/qrcode/${encodeURIComponent(qrcode)}`))
+//   .on('login',    user              => console.log(`User ${user} logined`))
+//   .on('message',  message           => console.log(`Message: ${message}`))
+//   .start()
