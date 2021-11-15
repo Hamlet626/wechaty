@@ -1,6 +1,6 @@
 # Wechaty Getting Started [![Powered by Wechaty](https://img.shields.io/badge/Powered%20By-Wechaty-brightgreen.svg)](https://wechaty.js.org)
 
-[![Node.js CI](https://github.com/wechaty/wechaty-getting-started/workflows/Node.js%20CI/badge.svg)](https://github.com/wechaty/wechaty-getting-started/actions?query=workflow%3A%22Node.js+CI%22)
+[![Node.js CI](https://github.com/wechaty/getting-started/workflows/Node.js%20CI/badge.svg)](https://github.com/wechaty/getting-started/actions?query=workflow%3A%22Node.js+CI%22)
 ![Node.js v16](https://img.shields.io/badge/node-%3E%3D16-green.svg)
 [![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-blue.svg)](https://www.typescriptlang.org/)
 [![ES Modules](https://img.shields.io/badge/ES-Modules-brightgreen)](https://github.com/Chatie/tsconfig/issues/16)
@@ -16,6 +16,10 @@ As a developer, you can use Wechaty to easily build your bot, effectively manage
 If you are a total beginner to Wechaty, this project is the best starting point for you. You can run it on a Cloud IDE in a couple of steps or on a local setup on your machine as described in the sections below.
 
 If you encounter difficulties or have any questions, you are welcome to ask for help in our Gitter room at <https://gitter.im/wechaty/wechaty>.
+
+Notice: the current active version of Wechaty is v1.x which is not compatible with most of the v0.x modules.
+
+- **`wechaty@0.x`** - To use the Wechaty v0.x, please visit the [Wechaty Getting Started v0.x](https://github.com/wechaty/getting-started/tree/v0.x) branch.
 
 ### Features of Wechaty Getting Started project
 
@@ -68,7 +72,7 @@ For you to run this project on your local machine, you need to:
 You need to clone this repository to your local machine and then switch to `wechaty-getting-started` directory by running the commands below.
 
 ```sh
-git clone https://github.com/wechaty/wechaty-getting-started.git
+git clone https://github.com/wechaty/getting-started.git
 cd wechaty-getting-started
 ```
 
@@ -177,7 +181,7 @@ Above is a 10 minute video tutorial. It is using version 0.14 or older versions 
 
 > Note: Before you attempt more examples, make sure you have tried out the wechaty getting started project in this repository.
 
-- [Official Wechaty Examples Directory](https://github.com/wechaty/wechaty-getting-started/tree/master/examples)
+- [Official Wechaty Examples Directory](https://github.com/wechaty/getting-started/tree/master/examples)
 
 ## API REFERENCE
 
@@ -187,15 +191,15 @@ Above is a 10 minute video tutorial. It is using version 0.14 or older versions 
 
 ### 1. Docker Wechaty Getting Started
 
-[![Docker](https://avatars0.githubusercontent.com/u/5429470?s=200)](https://github.com/Chatie/docker-wechaty-getting-started)
+[![Docker](https://avatars0.githubusercontent.com/u/5429470?s=200)](https://github.com/wechaty/docker-wechaty-getting-started)
 
-<https://github.com/Chatie/docker-wechaty-getting-started>
+<https://github.com/wechaty/docker-wechaty-getting-started>
 
 ### 2. Heroku Wechaty Getting Started
 
-[![Heroku](https://avatars3.githubusercontent.com/u/23211?s=200)](https://github.com/Chatie/heroku-wechaty-getting-started)
+[![Heroku](https://avatars3.githubusercontent.com/u/23211?s=200)](https://github.com/wechaty/heroku-wechaty-getting-started)
 
-<https://github.com/Chatie/heroku-wechaty-getting-started>
+<https://github.com/wechaty/heroku-wechaty-getting-started>
 
 ### 3. Wechaty Home
 
@@ -226,7 +230,7 @@ Learn more about Wechaty Puppet from our documentation at [Wechaty Puppet](https
 [![Wechaty in PHP](https://img.shields.io/badge/Wechaty-PHP-99c)](https://github.com/wechaty/php-wechaty)
 [![Wechaty in .NET(C#)](https://img.shields.io/badge/Wechaty-.NET-629)](https://github.com/wechaty/dotnet-wechaty)
 
-- [TypeScript Wechaty Getting Started](https://github.com/wechaty/wechaty-getting-started)
+- [TypeScript Wechaty Getting Started](https://github.com/wechaty/getting-started)
 - [Python Wechaty Getting Started](https://github.com/wechaty/python-wechaty-getting-started)
 - [Go Wechaty Getting Started](https://github.com/wechaty/go-wechaty-getting-started)
 - [Java Wechaty Getting Started](https://github.com/wechaty/java-wechaty-getting-started)
@@ -260,14 +264,14 @@ Init version
 
 ## Contributors
 
-[![contributor](https://sourcerer.io/fame/huan/wechaty/wechaty-getting-started/images/0)](https://sourcerer.io/fame/huan/wechaty/wechaty-getting-started/links/0)
-[![contributor](https://sourcerer.io/fame/huan/wechaty/wechaty-getting-started/images/1)](https://sourcerer.io/fame/huan/wechaty/wechaty-getting-started/links/1)
-[![contributor](https://sourcerer.io/fame/huan/wechaty/wechaty-getting-started/images/2)](https://sourcerer.io/fame/huan/wechaty/wechaty-getting-started/links/2)
-[![contributor](https://sourcerer.io/fame/huan/wechaty/wechaty-getting-started/images/3)](https://sourcerer.io/fame/huan/wechaty/wechaty-getting-started/links/3)
-[![contributor](https://sourcerer.io/fame/huan/wechaty/wechaty-getting-started/images/4)](https://sourcerer.io/fame/huan/wechaty/wechaty-getting-started/links/4)
-[![contributor](https://sourcerer.io/fame/huan/wechaty/wechaty-getting-started/images/5)](https://sourcerer.io/fame/huan/wechaty/wechaty-getting-started/links/5)
-[![contributor](https://sourcerer.io/fame/huan/wechaty/wechaty-getting-started/images/6)](https://sourcerer.io/fame/huan/wechaty/wechaty-getting-started/links/6)
-[![contributor](https://sourcerer.io/fame/huan/wechaty/wechaty-getting-started/images/7)](https://sourcerer.io/fame/huan/wechaty/wechaty-getting-started/links/7)
+[![contributor](https://sourcerer.io/fame/huan/wechaty/getting-started/images/0)](https://sourcerer.io/fame/huan/wechaty/getting-started/links/0)
+[![contributor](https://sourcerer.io/fame/huan/wechaty/getting-started/images/1)](https://sourcerer.io/fame/huan/wechaty/getting-started/links/1)
+[![contributor](https://sourcerer.io/fame/huan/wechaty/getting-started/images/2)](https://sourcerer.io/fame/huan/wechaty/getting-started/links/2)
+[![contributor](https://sourcerer.io/fame/huan/wechaty/getting-started/images/3)](https://sourcerer.io/fame/huan/wechaty/getting-started/links/3)
+[![contributor](https://sourcerer.io/fame/huan/wechaty/getting-started/images/4)](https://sourcerer.io/fame/huan/wechaty/getting-started/links/4)
+[![contributor](https://sourcerer.io/fame/huan/wechaty/getting-started/images/5)](https://sourcerer.io/fame/huan/wechaty/getting-started/links/5)
+[![contributor](https://sourcerer.io/fame/huan/wechaty/getting-started/images/6)](https://sourcerer.io/fame/huan/wechaty/getting-started/links/6)
+[![contributor](https://sourcerer.io/fame/huan/wechaty/getting-started/images/7)](https://sourcerer.io/fame/huan/wechaty/getting-started/links/7)
 
 ## Maintainers
 
@@ -280,7 +284,7 @@ Init version
 - Docs released under Creative Commons
 
 [gitpod_img]: https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod
-[gitpod_link]: https://gitpod.io/#https://github.com/wechaty/wechaty-getting-started
+[gitpod_link]: https://gitpod.io/#https://github.com/wechaty/getting-started
 
 [shell_img]: https://gstatic.com/cloudssh/images/open-btn.svg
-[shell_link]: https://ssh.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fwechaty%2Fwechaty-getting-started&cloudshell_open_in_editor=examples/ding-dong-bot.ts&cloudshell_workspace=.&cloudshell_tutorial=examples/tutorials/google-cloud-shell-tutorial.md
+[shell_link]: https://ssh.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fwechaty%2Fgetting-started&cloudshell_open_in_editor=examples/ding-dong-bot.ts&cloudshell_workspace=.&cloudshell_tutorial=examples/tutorials/google-cloud-shell-tutorial.md
