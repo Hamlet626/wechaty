@@ -64,68 +64,68 @@ if (process.env.WECHATY_PUPPET_PUPPETEER_ENDPOINT){
 }
 // const wc=require("wechaty");
 
-// import { FileBox }  from 'file-box'
-// import qrTerm from 'qrcode-terminal'
-//
-// /**
-//  *
-//  * 1. Declare your Bot!
-//  *
-//  */
+import { FileBox }  from 'file-box'
+import qrTerm from 'qrcode-terminal'
+
+/**
+ *
+ * 1. Declare your Bot!
+ *
+ */
 const bot = WechatyBuilder.build({
   name: 'myWechatyBot',
   puppetOptions
 })
-//
-// /**
-//  *
-//  * 2. Register event handlers for Bot
-//  *
-//  */
-// bot
+
+/**
+ *
+ * 2. Register event handlers for Bot
+ *
+ */
+bot
 //   .on('logout', onLogout)
 //   .on('login',  onLogin)
-//   .on('scan',   onScan)
-//   .on('error',  onError)
+  .on('scan',   onScan)
+  .on('error',  onError)
 //   .on('message', onMessage)
-//
-// /**
-//  *
-//  * 3. Start the bot!
-//  *
-//  */
+
+/**
+ *
+ * 3. Start the bot!
+ *
+ */
 bot.start()
   .catch(async e => {
     console.error('Bot start() fail:', e)
     await bot.stop()
     process.exit(-1)
   })
-//
-// /**
-//  *
-//  * 4. You are all set. ;-]
-//  *
-//  */
-//
-// /**
-//  *
-//  * 5. Define Event Handler Functions for:
-//  *  `scan`, `login`, `logout`, `error`, and `message`
-//  *
-//  */
-// function onScan (qrcode, status) {
-//   qrTerm.generate(qrcode, { small: true })
-//
-//   // Generate a QR Code online via
-//   // http://goqr.me/api/doc/create-qr-code/
-//   const qrcodeImageUrl = [
-//     'https://wechaty.js.org/qrcode/',
-//     encodeURIComponent(qrcode),
-//   ].join('')
-//
-//   console.log(`[${status}] ${qrcodeImageUrl}\nScan QR Code above to log in: `)
-// }
-//
+
+/**
+ *
+ * 4. You are all set. ;-]
+ *
+ */
+
+/**
+ *
+ * 5. Define Event Handler Functions for:
+ *  `scan`, `login`, `logout`, `error`, and `message`
+ *
+ */
+function onScan (qrcode, status) {
+  qrTerm.generate(qrcode, { small: true })
+
+  // Generate a QR Code online via
+  // http://goqr.me/api/doc/create-qr-code/
+  const qrcodeImageUrl = [
+    'https://wechaty.js.org/qrcode/',
+    encodeURIComponent(qrcode),
+  ].join('')
+
+  console.log(`[${status}] ${qrcodeImageUrl}\nScan QR Code above to log in: `)
+}
+
 // function onLogin (user) {
 //   console.log(`${user.name()} login`)
 //   bot.say('Wechaty login').catch(console.error)
@@ -134,15 +134,15 @@ bot.start()
 // function onLogout (user) {
 //   console.log(`${user.name()} logouted`)
 // }
-//
-// function onError (e) {
-//   console.error('Bot error:', e)
-//   /*
-//   if (bot.logonoff()) {
-//     bot.say('Wechaty error: ' + e.message).catch(console.error)
-//   }
-//   */
-// }
+
+function onError (e) {
+  console.error('Bot error:', e)
+  /*
+  if (bot.logonoff()) {
+    bot.say('Wechaty error: ' + e.message).catch(console.error)
+  }
+  */
+}
 //
 // /**
 //  *
@@ -190,32 +190,32 @@ bot.start()
 //   ].join(''))
 // }
 //
-// /**
-//  *
-//  * 7. Output the Welcome Message
-//  *
-//  */
-// const welcome = `
-// | __        __        _           _
-// | \\ \\      / /__  ___| |__   __ _| |_ _   _
-// |  \\ \\ /\\ / / _ \\/ __| '_ \\ / _\` | __| | | |
-// |   \\ V  V /  __/ (__| | | | (_| | |_| |_| |
-// |    \\_/\\_/ \\___|\\___|_| |_|\\__,_|\\__|\\__, |
-// |                                     |___/
-// =============== Powered by Wechaty ===============
-// -------- https://github.com/chatie/wechaty --------
-//           Version: ${bot.version(true)}
-// I'm a bot, my superpower is talk in Wechat.
-// If you send me a 'ding', I will reply you a 'dong'!
-// __________________________________________________
-// Hope you like it, and you are very welcome to
-// upgrade me to more superpowers!
-// Please wait... I'm trying to login in...
-// `
-// console.log(welcome)
+/**
+ *
+ * 7. Output the Welcome Message
+ *
+ */
+const welcome = `
+| __        __        _           _
+| \\ \\      / /__  ___| |__   __ _| |_ _   _
+|  \\ \\ /\\ / / _ \\/ __| '_ \\ / _\` | __| | | |
+|   \\ V  V /  __/ (__| | | | (_| | |_| |_| |
+|    \\_/\\_/ \\___|\\___|_| |_|\\__,_|\\__|\\__, |
+|                                     |___/
+=============== Powered by Wechaty ===============
+-------- https://github.com/chatie/wechaty --------
+          Version: ${bot.version(true)}
+I'm a bot, my superpower is talk in Wechat.
+If you send me a 'ding', I will reply you a 'dong'!
+__________________________________________________
+Hope you like it, and you are very welcome to
+upgrade me to more superpowers!
+Please wait... I'm trying to login in...
+`
+console.log(welcome)
 
 // wc.Wechaty.instance() // Singleton
 //   .on('scan',     (qrcode, status)  => console.log(`Scan QR Code to login: ${status}\nhttps://wechaty.js.org/qrcode/${encodeURIComponent(qrcode)}`))
-//   .on('login',    user              => console.log(`User ${user} logined`))
-//   .on('message',  message           => console.log(`Message: ${message}`))
+// //   .on('login',    user              => console.log(`User ${user} logined`))
+// //   .on('message',  message           => console.log(`Message: ${message}`))
 //   .start()
