@@ -73,16 +73,10 @@ const express = require('express')
 const http = require("http");
 setInterval(function() {
   http.get("http://wechaty-pc.herokuapp.com");
-}, 300000); // every 5 minutes (300000)
+}, 26*60*1000); // every 26 minutes
 
 const PORT = process.env.PORT || 5000;
 
-express()
-  // .use(express.static(path.join(__dirname, 'public')))
-  // .set('views', path.join(__dirname, 'views'))
-  // .set('view engine', 'ejs')
-  .get('/', (req, res) => res.send('xxx'))
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 /**
  *
  * 1. Declare your Bot!
@@ -117,6 +111,13 @@ bot.start()
     process.exit(-1)
   })
 
+express()
+  // .use(express.static(path.join(__dirname, 'public')))
+  // .set('views', path.join(__dirname, 'views'))
+  // .set('view engine', 'ejs')
+  .get('/', (req, res) => res.send('xxx'))
+  .get('/logout', (req, res) =>{bot.logout(); res.send('xxx');})
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 /**
  *
  * 4. You are all set. ;-]
