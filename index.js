@@ -69,6 +69,12 @@ if (process.env.WECHATY_PUPPET_PUPPETEER_ENDPOINT){
 const qrTerm = require('qrcode-terminal');
 
 const express = require('express')
+
+const http = require("http");
+setInterval(function() {
+  http.get("http://wechaty-pc.herokuapp.com");
+}, 300000); // every 5 minutes (300000)
+
 const PORT = process.env.PORT || 5000;
 
 express()
