@@ -56,6 +56,12 @@ import {
   // config,
   WechatyBuilder
 } from 'wechaty';
+
+let puppetOptions={}
+
+if (process.env.WECHATY_PUPPET_PUPPETEER_ENDPOINT){
+  puppetOptions.endpoint = process.env.WECHATY_PUPPET_PUPPETEER_ENDPOINT
+}
 // const wc=require("wechaty");
 
 // import { FileBox }  from 'file-box'
@@ -68,6 +74,7 @@ import {
 //  */
 const bot = WechatyBuilder.build({
   name: 'myWechatyBot',
+  puppetOptions
 })
 //
 // /**
