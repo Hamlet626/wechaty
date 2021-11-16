@@ -51,11 +51,12 @@
 //   .then(() => log.info('StarterBot', 'Starter Bot Started.'))
 //   .catch(e => log.error('StarterBot', e))
 
-import {
-  // Wechaty,
-  // config,
-  WechatyBuilder
-} from 'wechaty';
+const { Wechaty,WechatyOptions,WechatyBuilder } = require('wechaty');
+// import {
+//   // Wechaty,
+//   // config,
+//   WechatyBuilder
+// } from 'wechaty';
 
 let puppetOptions={}
 
@@ -64,9 +65,18 @@ if (process.env.WECHATY_PUPPET_PUPPETEER_ENDPOINT){
 }
 // const wc=require("wechaty");
 
-import { FileBox }  from 'file-box'
-import qrTerm from 'qrcode-terminal'
+// import { FileBox }  from 'file-box'
+const qrTerm = require('qrcode-terminal');
 
+const express = require('express')
+const PORT = process.env.PORT || 5000;
+
+express()
+  // .use(express.static(path.join(__dirname, 'public')))
+  // .set('views', path.join(__dirname, 'views'))
+  // .set('view engine', 'ejs')
+  .get('/', (req, res) => res.send('xxx'))
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 /**
  *
  * 1. Declare your Bot!
