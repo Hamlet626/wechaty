@@ -93,8 +93,8 @@ const bot = WechatyBuilder.build({
  *
  */
 bot
-//   .on('logout', onLogout)
-//   .on('login',  onLogin)
+  .on('logout', onLogout)
+  .on('login',  onLogin)
   .on('scan',   onScan)
   .on('error',  onError)
 //   .on('message', onMessage)
@@ -136,14 +136,14 @@ function onScan (qrcode, status) {
   console.log(`[${status}] ${qrcodeImageUrl}\nScan QR Code above to log in: `)
 }
 
-// function onLogin (user) {
-//   console.log(`${user.name()} login`)
-//   bot.say('Wechaty login').catch(console.error)
-// }
-//
-// function onLogout (user) {
-//   console.log(`${user.name()} logouted`)
-// }
+function onLogin (user) {
+  console.log(`${user.name()} login`)
+  bot.say('Wechaty login').catch(console.error)
+}
+
+function onLogout (user) {
+  console.log(`${user.name()} logouted`)
+}
 
 function onError (e) {
   console.error('Bot error:', e)
@@ -153,35 +153,35 @@ function onError (e) {
   }
   */
 }
-//
-// /**
-//  *
-//  * 6. The most important handler is for:
-//  *    dealing with Messages.
-//  *
-//  */
-// async function onMessage (msg) {
-//   console.log(msg.toString())
-//
-//   if (msg.age() > 60) {
-//     console.log('Message discarded because its TOO OLD(than 1 minute)')
-//     return
-//   }
-//
-//   if (   msg.type() !== bot.Message.Type.Text
-//     || !/^(ding|ping|bing|code)$/i.test(msg.text())
-//     /*&& !msg.self()*/
-//   ) {
-//     console.log('Message discarded because it does not match ding/ping/bing/code')
-//     return
-//   }
-//
-//   /**
-//    * 1. reply 'dong'
-//    */
-//   await msg.say('dong')
-//   console.log('REPLY: dong')
-//
+
+/**
+ *
+ * 6. The most important handler is for:
+ *    dealing with Messages.
+ *
+ */
+async function onMessage (msg) {
+  console.log(msg.toString())
+
+  if (msg.age() > 60) {
+    console.log('Message discarded because its TOO OLD(than 1 minute)')
+    return
+  }
+
+  if (   msg.type() !== bot.Message.Type.Text
+    || !/^(ding|ping|bing|code)$/i.test(msg.text())
+    /*&& !msg.self()*/
+  ) {
+    console.log('Message discarded because it does not match ding/ping/bing/code')
+    return
+  }
+
+  /**
+   * 1. reply 'dong'
+   */
+  await msg.say('dong')
+  console.log('REPLY: dong')
+
 //   /**
 //    * 2. reply image(qrcode image)
 //    */
@@ -193,13 +193,13 @@ function onError (e) {
 //   /**
 //    * 3. reply 'scan now!'
 //    */
-//   await msg.say([
-//     'Join Wechaty Developers Community\n\n',
-//     'Scan now, because other Wechaty developers want to talk with you too!\n\n',
-//     '(secret code: wechaty)',
-//   ].join(''))
-// }
-//
+  await msg.say([
+    'Join Wechaty Developers Community\n\n',
+    'Scan now, because other Wechaty developers want to talk with you too!\n\n',
+    '(secret code: wechaty)',
+  ].join(''))
+}
+
 /**
  *
  * 7. Output the Welcome Message
